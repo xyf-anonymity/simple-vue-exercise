@@ -1,0 +1,5 @@
+export const GETGITHUBUSERSDATA = 'getGitHubUsersData'
+export const GETSEARCHVALUE = 'getSearchValue'
+export const SEARCHING = 'searching'
+export const SEARCHSUCCESS = 'searchsuccess'
+export const SEARCHFAIL = 'searchFail'
