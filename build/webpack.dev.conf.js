@@ -12,6 +12,7 @@ const portfinder = require('portfinder')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
+const OPEN = process.env.OPEN && Boolean(process.env.OPEN)
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -33,7 +34,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     compress: true,
     host: HOST || config.dev.host,
     port: PORT || config.dev.port,
-    open: config.dev.autoOpenBrowser,
+    open: OPEN || config.dev.autoOpenBrowser,
     overlay: config.dev.errorOverlay
       ? { warnings: false, errors: true }
       : false,
